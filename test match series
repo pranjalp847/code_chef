@@ -1,0 +1,66 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+void ans()
+{
+    
+}
+
+int main()
+{
+    int n,count0=0,count1=0,count2=0;
+    cin >> n;
+    int a[n][5],b[5];
+    // int a,b,c,d,e,f;
+    for(int i=0;i<n;i++)
+    {
+        count2=0;
+        count1=0;
+        count0=0;
+        // cin >> a[i][0] >> a[i][1] >> a[i][2] >> a[i][3] >> a[i][4];
+        cin >> b[0] >> b[1] >> b[2] >> b[3] >> b[4];
+        
+        for(int j=0;j<5;j++)
+        {
+            if(b[j]==1)
+            {
+                count1++;
+            }
+            else if(b[j]==2)
+            {
+                count2++;
+            }
+            else if(b[j]==0)
+            {
+                count0++;
+            }
+        }
+        
+        if(count1>count2 )
+        {
+            cout << "INDIA" << endl;
+        }
+        else if(count2>count1 )
+        {
+            cout << "ENGLAND" << endl;
+        }
+        else if(count2 == count1 || count0==5)
+        {
+            cout << "DRAW" << endl;
+        }
+        
+        cout << endl;
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
